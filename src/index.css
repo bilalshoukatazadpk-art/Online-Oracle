@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "League Spartan", system-ui, -apple-system, sans-serif;
+  --font-sans: "Calibri", "Roboto", system-ui, -apple-system, sans-serif;
+  --color-oracle-orange: #FFA302;
+  --color-oracle-magenta: #CC1DB9;
+  --color-oracle-black: #000000;
+  --color-oracle-white: #FFFFFF;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.oracle-gradient-text {
+  background: linear-gradient(110deg, #FFA302 0%, #FF6A4D 45%, #CC1DB9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.oracle-gradient-line {
+  background: linear-gradient(90deg, #FFA302 0%, #CC1DB9 100%);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
